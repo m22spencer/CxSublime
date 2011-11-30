@@ -1,0 +1,26 @@
+A quickly thrown together plugin for haxe development in sublime.
+
+
+It's not feature complete, and has some bugs but is usable.
+
+
+to install: 
+1. Open sublime
+2. Navigate to Packages dir in shell ("Browse Packages" to find path)
+3. git clone git@github.com:m22spencer/CxSublime.git HaXe
+
+
+Configuration options:
+
+in your User keymaps bind the following:
+
+[
+	{"keys":["f6"], "command":"haxe_build_tool"},
+	{"keys":["f5"], "command":"haxe_build"}
+]
+
+F6 will open the configurable build tool, F5 will build.
+
+Autocomplete is based entirely off a project.hxml in your first open sublime folder.
+
+More to come soon, sorry, I'm in a hurry tonight.
