@@ -4,14 +4,26 @@ import subprocess
 import types
 import re
 import os
+import fnmatch
 
 from xml.etree import ElementTree as ET
 from urllib import urlopen
 
-GOOGLE_AC = r"http://google.com/complete/search?output=toolbar&q=%s"
-
 
 count = 0;
+
+def find_classpaths (dir_path, sub_name):
+    cpaths = []
+
+    for file in os.listdir (dir_path):
+        if fnmatch.fnmatch (file, sub_name):
+            data = open (file, "rb").read ()
+            m = re.compile ('-cp ([^\n\r]+)')
+            psl = m.findall (data)
+
+            for path in psl:
+                cpaths.append (path)
+    return cpaths
 
 def formatSignature(sig):
     fmt = re.sub("->",",", sig)
