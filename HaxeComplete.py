@@ -32,7 +32,7 @@ class HaxeBuildConfigCommand (sublime_plugin.WindowCommand):
 			while lchar < mx: 
 				shortened += h[0][lchar]
 				lchar+=1
-			avail.append ([h[1], shortened])
+			avail.append ([shortened, h[1]])
 
 		self.window.show_quick_panel (avail, _callback)
 		return
