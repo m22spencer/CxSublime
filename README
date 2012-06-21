@@ -7,20 +7,22 @@ It's not feature complete, and has some bugs but is usable.
 to install: 
 1. Open sublime
 2. Navigate to Packages dir in shell ("Browse Packages" to find path)
-3. git clone git@github.com:m22spencer/CxSublime.git HaXe
+3. git clone git@github.com:m22spencer/CxSublime.git Haxe
 
 
 Configuration options:
 
-in your User keymaps bind the following:
+in your User keymaps bind the following (Or whichever you choose to use):
 
 [
+    {"keys":["f5"], "command":"haxe_build"},
 	{"keys":["f6"], "command":"haxe_build_tool"},
-	{"keys":["f5"], "command":"haxe_build"}
+    {"keys":["ctrl+i"], "command": "haxe_generate_import"}
 ]
 
-F6 will open the configurable build tool, F5 will build.
+F6 will open the configurable build file select, F5 will build.
 
-Autocomplete is based entirely off a project.hxml in your first open sublime folder.
+ctrl+i will do a very... dumb generate import. It has basic guards against duplicates, 
+but does not check to see if the type actually exists before importing.
 
-More to come soon, sorry, I'm in a hurry tonight.
+Autocomplete is based entirely off your currently selected .hxml file (f6)
