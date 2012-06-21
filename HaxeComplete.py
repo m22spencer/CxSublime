@@ -153,7 +153,7 @@ def simple_haxe_compile (view):
 
 	view.window ().run_command("save_all") #FIXME have this save only existing files
 	if len (current_file) < 2:
-		view.window ().run_command ('build_config')
+		view.window ().run_command ('haxe_build_config')
 		return
 		
 	cwd = current_file[0]; 
