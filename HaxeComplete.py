@@ -158,6 +158,11 @@ def simple_haxe_compile (view):
 		
 	cwd = current_file[0]; 
 	cmd = ["haxe ", current_file[1]]
+	view.window ().run_command("exec",{
+		"cmd": cmd, 
+		"working_dir" : cwd, 
+		"file_regex": "(.+):([0-9]+): characters ([0-9]+-[0-9]+) : (.*)$" })
+
 	ret = run_process (cwd, cmd)
 	print "Return: " + ret
 	return
