@@ -20,19 +20,9 @@ class HaxeBuildConfigCommand (sublime_plugin.WindowCommand):
 			if idx == -1: return
 			_cb (hxml_list[idx])
 
-			
-
-
 		avail = [];
 		for h in hxml_list:
-			mx = lchar = len (h[0])
-			lchar -= 40;
-			if lchar < 0: lchar = 0
-			shortened = ""
-			while lchar < mx: 
-				shortened += h[0][lchar]
-				lchar+=1
-			avail.append ([shortened, h[1]])
+			avail.append ([h[0], h[1]])
 
 		self.window.show_quick_panel (avail, _callback)
 		return
