@@ -1,14 +1,15 @@
 A quickly thrown together plugin for haxe development in sublime.
 
-
-It's not feature complete, and has some bugs but is usable.
+KNOWN BUGS:
+    Windows: exec fails with certain versions of python due to no piping the output.
+                    This requires a patch to the sublime exec.py with stederr=PIPE
+    Linux: Some versions of linux/py will not work properly with xmltree.
 
 
 to install: 
 1. Open sublime
 2. Navigate to Packages dir in shell ("Browse Packages" to find path)
 3. git clone git@github.com:m22spencer/CxSublime.git Haxe
-
 
 Configuration options:
 
@@ -20,7 +21,9 @@ in your User keymaps bind the following (Or whichever you choose to use):
     {"keys":["ctrl+i"], "command": "haxe_generate_import"}
 ]
 
-F6 will open the configurable build file select, F5 will build.
+The build tool will recursively scan ALL folders in the sidebar of sublime.
+    It will use the directory of the currently selected .hxml as a working directory.
+
 
 ctrl+i will do a very... dumb generate import. It has basic guards against duplicates, 
 but does not check to see if the type actually exists before importing.
