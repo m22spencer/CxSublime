@@ -16,8 +16,8 @@ Configuration options:
 in your User keymaps bind the following (Or whichever you choose to use):
 
 [
-    {"keys":["f5"], "command":"haxe_build"},
-    {"keys":["f6"], "command":"haxe_build_tool"},
+    {"keys":["f5"], "command":"haxe_compile"},
+    {"keys":["f6"], "command":"haxe_build_config"},
     {"keys":["ctrl+i"], "command": "haxe_generate_import"}
 ]
 
