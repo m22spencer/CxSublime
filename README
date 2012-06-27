@@ -9,7 +9,7 @@ KNOWN BUGS:
 to install: 
 1. Open sublime
 2. Navigate to Packages dir in shell ("Browse Packages" to find path)
-3. git clone git@github.com:m22spencer/CxSublime.git Haxe
+3. git clone git://github.com/m22spencer/CxSublime.git Haxe
 
 Configuration options:
 
